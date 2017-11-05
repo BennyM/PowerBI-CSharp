@@ -1,4 +1,4 @@
-# Power BI for .NET Standard [![NuGet](https://img.shields.io/nuget/v/PowerBI.Api.svg)](https://www.nuget.org/packages/PowerBI.Api/)
+# Power BI for .NET Standard [![NuGet](https://img.shields.io/nuget/v/PowerBI.Api.svg)](https://www.nuget.org/packages/PowerBI.Api/) [![Visual Studio Team services](https://img.shields.io/vso/build/bennym/b0efa289-2c42-485f-981f-dc1e9f967127/5.svg)]()
 
 For the official SDK please go to their [repository](https://github.com/Microsoft/PowerBI-CSharp).
 
