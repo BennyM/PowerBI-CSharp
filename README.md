@@ -6,8 +6,13 @@ For questions or issues using the SDKs please log an issue and we will respond a
 
 For more information regarding onboarding to Power BI Embedded see our [Embedding documentation](https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-embedding/).
 
-## Power BI Embedded REST Client
-The `Microsoft.PowerBI.Api` is a .NET REST Client to easily consume the Power BI Embedded REST services.
+## Issues
+[Power BI Support Page](https://powerbi.microsoft.com/en-us/support/)
+
+[Power BI Ideas](https://ideas.powerbi.com)
+
+## Power BI Embedded Core Libraries
+The `Microsoft.PowerBI.Core` package contains APIs to generate report embed tokens.
 
 ### Install from Nuget
 `Install-Package Microsoft.PowerBI.Api`
@@ -74,12 +79,11 @@ Add the Power BI script include before your apps closing `</body>` tag
 The tile & report embed will automatically be embedded based on the size of the embed container.  
 To override the default size of the embeds simply add a CSS class attribute or inline styles for width & height.
 
-# Embedding a Report
-To embed a report, you need to write:
-1) Backend code to generate Embed Tokens. This uses Microsoft.PowerBI.Api nuget.
-2) Frontend code (javascript) to embed a report. This uses Microsoft.PowerBI.Javascript nuget.
+# ASP.NET MVC
+The `Microsoft.PowerBI.AspNet.Mvc` package is a lightweight wrapper that contains MVC HTML helpers that generate HTML markup compatible with the core JavaScript SDK.
 
-A full sample is available in this [Github](https://github.com/Microsoft/PowerBI-developer-samples)
+## Install from Nuget
+`Install-Package Microsoft.PowerBI.AspNet.Mvc`
 
 ## Backend code sample To generate embed token
 
@@ -90,11 +94,10 @@ var credential = new UserPasswordCredential(Username, Password);
 var authenticationContext = new AuthenticationContext(AuthorityUrl);
 var authenticationResult = authenticationContext.AcquireTokenAsync(ResourceUrl, ClientId, credential).Result;
 
-var tokenCredentials = new TokenCredentials(authenticationResult.AccessToken, "Bearer");
-
-// Create a Power BI Client object (it will be used to call Power BI APIs)
-using (var client = new PowerBIClient(new Uri(ApiUrl), tokenCredentials))
-{
+# ASP.NET WebForms
+The `Microsoft.PowerBI.AspNet.WebForms` package is a lightweight wrapper that contains ASP.NET Webform controls that generate HTML markup compatible with the core JavaScript SDK.
+## Install from Nuget
+`Install-Package Microsoft.PowerBI.AspNet.WebForms`
 
     // Get a list of reports
     var reports = client.Reports.GetReportsInGroup(GroupId);
