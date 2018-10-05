@@ -5,8 +5,11 @@ For the official SDK please go to their [repository](https://github.com/Microsof
 ## Install from Nuget
 `Install-Package PowerBI.Api`
 
+For more information regarding onboarding to Power BI Embedded see our [Embedding documentation](https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-embedding/).
+
 ## Usage: Calling the GetReports API in a netcoreapp2
 In the official documentation you will find references to `UserPasswordCredential`. This class is not available in netcoreapp2. To get a token from Azure AD you will need to call the API directly as illustrated below.
+
 ```
 private async Task<TokenCredentials> GetAccessToken()
 {
@@ -39,6 +42,7 @@ private async Task<TokenCredentials> GetAccessToken()
         return new TokenCredentials(token, "Bearer");
     }
 }
+
 public async Task<IActionResult> Index()
 {
 
@@ -50,7 +54,7 @@ public async Task<IActionResult> Index()
     {
 
         // Get a list of all groupts
-        var reports = powerBiclient.Groups.GetGroups();
+        var groups = powerBiclient.Groups.GetGroups();
 
         // Do anything you want with the list of groups.
     }
