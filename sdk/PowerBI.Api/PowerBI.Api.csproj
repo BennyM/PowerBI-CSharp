@@ -4,7 +4,7 @@
         <title>Power BI API SDK for .NET Standard</title>
         <authors>Benny Michielsen</authors>
         <owners>Benny Michielsen</owners>
-        <projectUrl>https://github.com/BennyM/PowerBI-CSharp</projectUrl>
+        <PackageProjectUrl>https://github.com/BennyM/PowerBI-CSharp</PackageProjectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <summary>Client library for Power BI targeting .NET Standard.</summary>
         <description>Unofficial Microsoft.PowerBI.Api port to .NET Standard 2.0. This version contains all features of the official 2.0.12 version.</description>
